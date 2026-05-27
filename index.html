@@ -161,12 +161,18 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative h-screen flex items-center justify-center bg-brand-dark text-white overflow-hidden">
-        <!-- Background Img (Simulando o vídeo/imagem de arquitetura premium em tela cheia) -->
-        <div class="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-luminosity scale-105 transition-transform duration-1000" 
-             style="background-image: url(images/fotocentrosite.jpg);">
-        </div>
-        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark via-transparent to-brand-dark/50"></div>
+<section class="relative h-screen flex items-center justify-center bg-brand-dark text-white overflow-hidden">
+    
+    <!-- Background Img Local -->
+    <div 
+        class="absolute inset-0 bg-cover bg-center opacity-100 scale-105 transition-transform duration-1000"
+        style="background-image: url('./images/fotocentrosite.jpg');">
+    </div>
+
+    <!-- Overlay escuro premium -->
+    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 via-brand-dark/20 to-brand-dark/60"></div>
+
+</section>
 
         <div class="relative max-w-5xl mx-auto px-6 text-center z-10 space-y-6 lg:space-y-8 mt-12">
             <h1 class="font-premium text-3xl md:text-5xl lg:text-6xl text-brand-ice leading-tight tracking-wide" data-aos="fade-up" data-aos-duration="1000">
