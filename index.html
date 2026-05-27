@@ -65,8 +65,8 @@ body{
 .hero-overlay{
     background:linear-gradient(
         180deg,
-        rgba(11,44,95,0.65),
-        rgba(11,44,95,0.82)
+        rgba(11,44,95,0.55),
+        rgba(11,44,95,0.72)
     );
 }
 
@@ -89,6 +89,14 @@ body{
 
 .card-hover:hover .img-zoom{
     transform:scale(1.08);
+}
+
+.gallery-hover{
+    transition:all .7s ease;
+}
+
+.gallery-hover:hover{
+    transform:scale(1.05);
 }
 
 </style>
@@ -156,7 +164,7 @@ class="h-16 lg:h-20 object-contain"/>
 
     </div>
 
-    <!-- OVERLAY MAIS SUAVE -->
+    <!-- OVERLAY -->
     <div class="absolute inset-0 bg-brand-navy/35"></div>
 
     <!-- CONTEÚDO -->
@@ -201,6 +209,7 @@ class="h-16 lg:h-20 object-contain"/>
     </div>
 
 </section>
+
 <!-- AMBIENTES -->
 <section id="ambientes"
 class="py-28 bg-brand-offwhite text-brand-navy">
@@ -226,7 +235,7 @@ Soluções Sob Medida
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
 <!-- CARD -->
-<div class="bg-white overflow-hidden shadow-2xl card-hover">
+<div class="bg-white overflow-hidden shadow-2xl card-hover rounded-2xl">
 
 <div class="overflow-hidden h-72">
 
@@ -250,7 +259,7 @@ Projetos sofisticados com integração perfeita entre elegância e funcionalidad
 </div>
 
 <!-- CARD -->
-<div class="bg-white overflow-hidden shadow-2xl card-hover">
+<div class="bg-white overflow-hidden shadow-2xl card-hover rounded-2xl">
 
 <div class="overflow-hidden h-72">
 
@@ -274,7 +283,7 @@ Organização premium com iluminação elegante e acabamento refinado.
 </div>
 
 <!-- CARD -->
-<div class="bg-white overflow-hidden shadow-2xl card-hover">
+<div class="bg-white overflow-hidden shadow-2xl card-hover rounded-2xl">
 
 <div class="overflow-hidden h-72">
 
@@ -387,75 +396,70 @@ Consultoria dedicada do início ao fim do seu projeto.
 <section id="galeria"
 class="py-28 bg-white text-brand-navy">
 
-    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-        <!-- TÍTULO -->
-        <div class="text-center mb-20">
+<div class="text-center mb-20">
 
-            <span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
+<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
 
-                PROJETOS
+PROJETOS
 
-            </span>
+</span>
 
-            <h2 class="font-premium text-4xl md:text-5xl mt-4">
+<h2 class="font-premium text-4xl md:text-5xl mt-4">
 
-                Galeria Premium
+Galeria Premium
 
-            </h2>
+</h2>
 
-        </div>
+</div>
 
-        <!-- GRID 4 IMAGENS IGUAIS -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- GRID 4 FOTOS -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-            <!-- FOTO 1 -->
-            <div class="overflow-hidden rounded-2xl shadow-2xl group h-[420px]">
+<!-- FOTO 1 -->
+<div class="overflow-hidden rounded-2xl shadow-2xl h-[420px]">
 
-                <img 
-                    src="./images/1.jpg"
-                    alt="Projeto 1"
-                    class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-                >
+<img 
+src="./images/1.jpg"
+alt="Projeto 1"
+class="w-full h-full object-cover gallery-hover">
 
-            </div>
+</div>
 
-            <!-- FOTO 2 -->
-            <div class="overflow-hidden rounded-2xl shadow-2xl group h-[420px]">
+<!-- FOTO 2 -->
+<div class="overflow-hidden rounded-2xl shadow-2xl h-[420px]">
 
-                <img 
-                    src="./images/2.jpg"
-                    alt="Projeto 2"
-                    class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-                >
+<img 
+src="./images/2.jpg"
+alt="Projeto 2"
+class="w-full h-full object-cover gallery-hover">
 
-            </div>
+</div>
 
-            <!-- FOTO 3 -->
-            <div class="overflow-hidden rounded-2xl shadow-2xl group h-[420px]">
+<!-- FOTO 3 -->
+<div class="overflow-hidden rounded-2xl shadow-2xl h-[420px]">
 
-                <img 
-                    src="./images/3.jpg"
-                    alt="Projeto 3"
-                    class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-                >
+<img 
+src="./images/3.jpg"
+alt="Projeto 3"
+class="w-full h-full object-cover gallery-hover">
 
-            </div>
+</div>
 
-            <!-- FOTO 4 -->
-            <div class="overflow-hidden rounded-2xl shadow-2xl group h-[420px]">
+<!-- FOTO 4 -->
+<div class="overflow-hidden rounded-2xl shadow-2xl h-[420px]">
 
-                <img 
-                    src="./images/4.jpg"
-                    alt="Projeto 4"
-                    class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
-                >
+<img 
+src="./images/4.jpg"
+alt="Projeto 4"
+class="w-full h-full object-cover gallery-hover">
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+</div>
 
 </section>
 
@@ -470,7 +474,7 @@ class="py-28 bg-brand-offwhite text-brand-navy">
 <div>
 
 <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80"
-class="w-full shadow-2xl">
+class="w-full rounded-2xl shadow-2xl">
 
 </div>
 
@@ -529,13 +533,13 @@ class="w-full h-full object-cover">
 
 <span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
 
-ORÇAMENTO
+CONTATO
 
 </span>
 
 <h2 class="font-premium text-4xl md:text-6xl">
 
-Solicite Seu Projeto
+Fale com a HOME INTERIORES
 
 </h2>
 
@@ -545,41 +549,23 @@ Entre em contato e transforme seu ambiente com exclusividade e sofisticação.
 
 </p>
 
-<form class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-10">
+<div class="pt-10 flex flex-col md:flex-row justify-center gap-6">
 
-<input type="text"
-placeholder="Nome"
-class="bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50">
+<a href="#"
+class="bg-brand-gold text-brand-navy px-10 py-5 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white transition-all duration-300">
 
-<input type="email"
-placeholder="E-mail"
-class="bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50">
+WhatsApp
 
-<input type="tel"
-placeholder="Telefone"
-class="bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50">
+</a>
 
-<select class="bg-brand-navysoft border border-white/20 px-6 py-4 outline-none text-white">
+<a href="#"
+class="border border-white/40 px-10 py-5 uppercase tracking-[0.25em] text-xs font-bold hover:border-brand-gold hover:text-brand-gold transition-all duration-300">
 
-<option>Cozinha Planejada</option>
-<option>Closet</option>
-<option>Dormitório</option>
-<option>Sala</option>
+Instagram
 
-</select>
+</a>
 
-<textarea rows="5"
-placeholder="Fale sobre seu projeto..."
-class="md:col-span-2 bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50"></textarea>
-
-<button
-class="md:col-span-2 bg-brand-gold text-brand-navy py-5 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white transition-all duration-300">
-
-Enviar Solicitação
-
-</button>
-
-</form>
+</div>
 
 </div>
 
@@ -665,13 +651,11 @@ const header = document.getElementById('header');
 if(window.scrollY > 50){
 
 header.classList.remove('bg-brand-navy/70');
-
 header.classList.add('bg-brand-navy');
 
 }else{
 
 header.classList.remove('bg-brand-navy');
-
 header.classList.add('bg-brand-navy/70');
 
 }
