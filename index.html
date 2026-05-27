@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Interiores | Móveis Planejados de Alto Padrão</title>
-    <meta name="description" content="Móveis planejados e sob medida de alto padrão. Marcenaria premium, design de interiores moderno, cozinhas planejadas, closets luxuosos e ambientes exclusivos.">
-    <meta name="keywords" content="móveis planejados, móveis sob medida, marcenaria premium, design de interiores, cozinha planejada, closet planejado, arquitetura de luxo">
-    
-    <!-- Tailwind CSS -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>HOME INTERIORES | Móveis Sob Medida</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
 
 <script>
 tailwind.config = {
@@ -15,776 +15,651 @@ tailwind.config = {
         extend: {
             colors: {
                 brand: {
-                    /* AZUL DA LOGO */
                     navy: '#0b2c5f',
-                    dark: '#0b2c5f',
-
-                    /* DOURADO DA LOGO */
+                    navysoft: '#12396f',
                     gold: '#c8ab72',
                     goldlight: '#e2cfab',
-
-                    /* TONS CLAROS */
                     offwhite: '#f5f5f2',
                     ice: '#edf2f7',
-                    clay: '#e5e7eb',
-                    gray: '#94a3b8'
+                    clay: '#d9dee7',
+                    gray: '#9ca3af'
                 }
             },
 
             fontFamily: {
-                serif: ["'Times New Roman'", "Times", "Baskerville", "Playfair Display", "serif"],
-                sans: ["'Inter'", "'Helvetica Neue'", "Arial", "sans-serif"]
+                premium: [
+                    "'Times New Roman'",
+                    "Times",
+                    "serif"
+                ],
+
+                sans: [
+                    "'Inter'",
+                    "sans-serif"
+                ]
             }
         }
     }
 }
 </script>
 
-    <!-- Google Fonts & AOS Animation CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- Swiper JS CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f9f9f7;
-            color: #111111;
-            overflow-x: hidden;
-        }
-        .font-premium {
-            font-family: 'Times New Roman', Times, 'Didot', 'Playfair Display', serif;
-            letter-spacing: 0.05em;
-        }
-        .backdrop-blur-md {
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        /* Custom Swiper Styles */
-        .swiper-pagination-bullet-active {
-            background: #c5a880 !important;
-            width: 24px !important;
-            border-radius: 4px !important;
-        }
-        /* Zoom Hover Effect */
-        .img-zoom {
-            transition: transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
-        }
-        .card-premium:hover .img-zoom {
-            transform: scale(1.06);
-        }
-        /* Timeline line */
-        .timeline-line::before {
-            content: '';
-            position: absolute;
-            top: 40px;
-            left: 16px;
-            height: calc(100% - 60px);
-            width: 1px;
-            background-color: #eae6df;
-        }
-        @media (min-width: 768px) {
-            .timeline-line::before {
-                left: 50%;
-                top: 0;
-                height: 100%;
-            }
-        }
-    </style>
+<style>
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0b2c5f;
+    overflow-x:hidden;
+}
+
+.font-premium{
+    font-family:'Times New Roman', serif;
+    letter-spacing:0.04em;
+}
+
+.hero-overlay{
+    background:linear-gradient(
+        180deg,
+        rgba(11,44,95,0.65),
+        rgba(11,44,95,0.82)
+    );
+}
+
+.glass{
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+}
+
+.card-hover{
+    transition:all .5s ease;
+}
+
+.card-hover:hover{
+    transform:translateY(-8px);
+}
+
+.img-zoom{
+    transition:transform 1.2s ease;
+}
+
+.card-hover:hover .img-zoom{
+    transform:scale(1.08);
+}
+
+</style>
+
 </head>
-<body class="antialiased selection:bg-brand-gold selection:text-white">
 
-    <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." 
-       target="_blank" 
-       rel="noopener noreferrer"
-       class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
-       aria-label="Falar no WhatsApp">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.845-4.415 9.849-9.847a9.757 9.757 0 0 0-2.868-6.963 9.757 9.757 0 0 0-6.959-2.87C6.605 2.925 2.19 7.339 2.186 12.77c-.001 1.922.499 3.799 1.448 5.4l-1.031 3.766 3.864-1.013zM18.14 14.8c-.332-.166-1.969-.972-2.271-1.082-.301-.11-.522-.166-.743.166-.221.331-.855 1.082-1.048 1.302-.192.221-.386.248-.718.083-1.748-.875-2.909-1.51-4.07-3.504-.308-.53.308-.492.88-1.632.192-.386.096-.719-.048-1.05-.144-.332-1.217-2.934-1.667-4.015-.439-1.053-.888-.912-1.217-.928-.31-.015-.667-.018-.1.018-.332 0-.871.124-1.326.622-.455.498-1.737 1.698-1.737 4.142 0 2.444 1.779 4.802 2.028 5.134.25.332 3.501 5.347 8.481 7.495 1.185.511 2.111.815 2.833 1.045 1.19.378 2.274.325 3.13.197.954-.142 1.97-.804 2.248-1.542.279-.738.279-1.37.197-1.502-.084-.133-.302-.213-.635-.38z"/>
-        </svg>
-        <span class="absolute right-16 bg-brand-dark text-white text-xs uppercase tracking-widest px-3 py-2 rounded-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none">
-            Fale Conosco
-        </span>
-    </a>
+<body class="text-white">
 
-    <!-- HEADER / MENU -->
-    <header class="fixed top-0 left-0 w-full z-40 bg-white/70 backdrop-blur-md transition-all duration-300 border-b border-black/5">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
-            
-            <!-- Logo -->
-            <a href="#" class="flex items-center gap-3">
-                <img src="images/LOGOMOVEIS.png" alt="Home Interiores" class="h-10 lg:h-12 w-auto object-contain">
-            </a>
+<!-- BOTÃO WHATS -->
+<a href="#"
+class="fixed bottom-6 right-6 z-50 w-16 h-16 rounded-full bg-[#25D366] flex items-center justify-center shadow-2xl hover:scale-110 transition-all duration-300">
 
-            <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-brand-dark">
-                <a href="#" class="hover:text-brand-gold transition-colors duration-300 text-brand-gold">Home</a>
-                <a href="#ambientes" class="hover:text-brand-gold transition-colors duration-300">Ambientes</a>
-                <a href="#galeria" class="hover:text-brand-gold transition-colors duration-300">Projetos</a>
-                <a href="#sobre" class="hover:text-brand-gold transition-colors duration-300">Sobre</a>
-                <a href="#processo" class="hover:text-brand-gold transition-colors duration-300">Processo</a>
-                <a href="https://instagram.com/homeinteriores" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors duration-300 flex items-center gap-1">
-                    <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                </a>
-            </nav>
+<svg class="w-8 h-8 fill-white" viewBox="0 0 24 24">
+<path d="M.057 24l1.687-6.163C.703 16.033.157 13.988.157 11.891.16 5.348 5.497.01 12.108.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L.057 24z"/>
+</svg>
 
-            <!-- CTA Header -->
-            <div class="hidden lg:block">
-                <a href="#contato" class="bg-brand-dark text-white text-xs uppercase tracking-widest px-6 py-3 border border-brand-dark hover:bg-transparent hover:text-brand-dark transition-all duration-300 font-medium">
-                    Solicitar Projeto
-                </a>
-            </div>
+</a>
 
-            <!-- Mobile Menu Button -->
-            <button id="mobile-menu-btn" class="lg:hidden text-brand-dark focus:outline-none" aria-label="Abrir Menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"/>
-                </svg>
-            </button>
-        </div>
+<!-- HEADER -->
+<header id="header"
+class="fixed top-0 left-0 w-full z-50 bg-brand-navy/70 glass border-b border-white/10 transition-all duration-300">
 
-        <!-- Mobile Navigation Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-black/5 w-full absolute left-0 top-20 px-6 py-8 shadow-xl space-y-5 text-xs uppercase tracking-widest font-medium text-brand-dark">
-            <a href="#" class="block hover:text-brand-gold py-2 transition-colors">Home</a>
-            <a href="#ambientes" class="block hover:text-brand-gold py-2 transition-colors">Ambientes</a>
-            <a href="#galeria" class="block hover:text-brand-gold py-2 transition-colors">Projetos</a>
-            <a href="#sobre" class="block hover:text-brand-gold py-2 transition-colors">Sobre</a>
-            <a href="#processo" class="block hover:text-brand-gold py-2 transition-colors">Processo</a>
-            <a href="https://instagram.com/homeinteriores" target="_blank" class="flex items-center gap-2 hover:text-brand-gold py-2 transition-colors">
-                <span>Instagram</span>
-            </a>
-            <div class="pt-4">
-                <a href="#contato" class="block text-center bg-brand-dark text-white px-6 py-3 tracking-widest font-semibold">
-                    Solicitar Projeto
-                </a>
-            </div>
-        </div>
-    </header>
+<div class="max-w-7xl mx-auto px-6 lg:px-12 h-24 flex items-center justify-between">
 
-  <!-- HERO SECTION -->
-<section class="relative h-screen flex items-center justify-center bg-brand-dark text-white overflow-hidden">
+<!-- LOGO -->
+<a href="#" class="flex items-center">
 
-    <!-- IMAGEM DE FUNDO -->
-    <div 
-        class="absolute inset-0 bg-cover bg-center scale-105"
-        style="background-image: url('./images/fotocentrosite.jpg');">
-    </div>
+<img src="images/LOGOMOVEIS.png"
+alt="HOME INTERIORES"
+class="h-16 lg:h-20 object-contain"/>
 
-    <!-- OVERLAY PREMIUM -->
-    <div class="absolute inset-0 bg-black/45"></div>
+</a>
 
-    <!-- CONTEÚDO SOBRE A IMAGEM -->
-    <div class="relative z-10 max-w-5xl mx-auto px-6 text-center space-y-6 lg:space-y-8">
+<!-- MENU -->
+<nav class="hidden lg:flex items-center gap-10 text-xs uppercase tracking-[0.25em] font-medium">
 
-        <h1 
-            class="font-premium text-3xl md:text-5xl lg:text-6xl text-white leading-tight tracking-wide drop-shadow-2xl"
-            data-aos="fade-up"
-            data-aos-duration="1000">
+<a href="#" class="hover:text-brand-gold transition">Home</a>
 
-            Projetos exclusivos que transformam ambientes em experiências
+<a href="#ambientes" class="hover:text-brand-gold transition">Ambientes</a>
 
-        </h1>
+<a href="#galeria" class="hover:text-brand-gold transition">Projetos</a>
 
-        <p 
-            class="text-white/85 max-w-2xl mx-auto text-sm md:text-base font-light tracking-wide leading-relaxed drop-shadow-lg"
-            data-aos="fade-up"
-            data-aos-duration="1200"
-            data-aos-delay="200">
+<a href="#sobre" class="hover:text-brand-gold transition">Sobre</a>
 
-            Móveis planejados sob medida de alto padrão, desenhados para refletir a sua personalidade com sofisticação, precisão geométrica e acabamento impecável.
+<a href="#contato" class="hover:text-brand-gold transition">Contato</a>
 
-        </p>
+</nav>
 
-        <div 
-            class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
-            data-aos="fade-up"
-            data-aos-duration="1400"
-            data-aos-delay="400">
+<!-- BOTÃO -->
+<a href="#contato"
+class="hidden lg:flex items-center justify-center border border-brand-gold bg-brand-gold text-brand-navy px-8 py-4 text-xs uppercase tracking-[0.25em] font-bold hover:bg-transparent hover:text-white transition-all duration-300">
 
-            <a 
-                href="#contato"
-                class="w-full sm:w-auto bg-brand-gold text-brand-dark font-medium text-xs uppercase tracking-widest px-8 py-4 hover:bg-white hover:text-brand-dark transition-all duration-300 shadow-2xl">
+Solicitar Projeto
 
-                Solicitar Orçamento
+</a>
 
-            </a>
+</div>
 
-            <a 
-                href="#ambientes"
-                class="w-full sm:w-auto bg-transparent text-white font-medium text-xs uppercase tracking-widest px-8 py-4 border border-white/40 hover:border-brand-gold hover:text-brand-gold transition-all duration-300 backdrop-blur-sm">
+</header>
 
-                Ver Ambientes
+<!-- HERO -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
 
-            </a>
+<!-- BG -->
+<div class="absolute inset-0">
 
-        </div>
+<img src="./images/fotocentrosite.jpg"
+class="w-full h-full object-cover scale-105"
+alt="Home Interiores"/>
 
-    </div>
+</div>
+
+<!-- OVERLAY -->
+<div class="absolute inset-0 hero-overlay"></div>
+
+<!-- CONTEÚDO -->
+<div class="relative z-10 max-w-6xl mx-auto px-6 text-center">
+
+<div class="space-y-8">
+
+<h1 class="font-premium text-4xl md:text-6xl lg:text-7xl leading-tight text-white">
+
+Projetos Exclusivos<br>
+para Ambientes Sofisticados
+
+</h1>
+
+<p class="max-w-3xl mx-auto text-white/80 text-sm md:text-lg font-light leading-relaxed">
+
+Móveis planejados de alto padrão com acabamento impecável,
+design contemporâneo e sofisticação premium em cada detalhe.
+
+</p>
+
+<div class="flex flex-col sm:flex-row justify-center gap-5 pt-6">
+
+<a href="#contato"
+class="bg-brand-gold text-brand-navy px-10 py-5 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white transition-all duration-300">
+
+Solicitar Orçamento
+
+</a>
+
+<a href="#galeria"
+class="border border-white/40 px-10 py-5 uppercase tracking-[0.25em] text-xs font-bold hover:border-brand-gold hover:text-brand-gold transition-all duration-300">
+
+Ver Projetos
+
+</a>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-60">
-            <span class="text-[9px] uppercase tracking-widest font-light text-brand-ice">Explore</span>
-            <div class="w-[1px] h-10 bg-gradient-to-b from-brand-gold to-transparent animate-pulse"></div>
-        </div>
-    </section>
+<!-- AMBIENTES -->
+<section id="ambientes"
+class="py-28 bg-brand-offwhite text-brand-navy">
 
-    <!-- SEÇÃO AMBIENTES -->
-    <section id="ambientes" class="py-24 lg:py-32 bg-brand-offwhite">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            
-            <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-24 space-y-3">
-                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block" data-aos="fade-up">Portfólio</span>
-                <h2 class="font-premium text-2xl md:text-4xl text-brand-dark" data-aos="fade-up" data-aos-delay="100">Soluções Sob Medida por Ambiente</h2>
-                <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-4"></div>
-            </div>
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
 
-            <!-- Grid de Cards Premium -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- Card 1: Cozinhas -->
-                <div class="card-premium group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-                    <div class="overflow-hidden aspect-[4/3] bg-brand-ice">
-                        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800" alt="Cozinhas Planejadas" class="img-zoom w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0">
-                    </div>
-                    <div class="p-8 space-y-3 bg-white relative z-10">
-                        <h3 class="font-premium text-lg text-brand-dark">Cozinhas Planejadas</h3>
-                        <p class="text-xs text-brand-gray leading-relaxed font-light">Funcionalidade inteligente, eletros embutidos e paletas contemporâneas para o coração da casa.</p>
-                        <a href="#contato" class="inline-block pt-2 text-[11px] uppercase tracking-widest text-brand-gold font-medium group-hover:text-brand-dark transition-colors duration-300">Ver Projeto &rarr;</a>
-                    </div>
-                </div>
+<div class="text-center mb-20">
 
-                <!-- Card 2: Closets -->
-                <div class="card-premium group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                    <div class="overflow-hidden aspect-[4/3] bg-brand-ice">
-                        <img src="https://images.unsplash.com/photo-1558882224-cca166733360?auto=format&fit=crop&q=80&w=800" alt="Closets" class="img-zoom w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0">
-                    </div>
-                    <div class="p-8 space-y-3 bg-white relative z-10">
-                        <h3 class="font-premium text-lg text-brand-dark">Closets Luxuosos</h3>
-                        <p class="text-xs text-brand-gray leading-relaxed font-light">Organização cirúrgica com iluminação em LED integrada e texturas internas aveludadas de alto padrão.</p>
-                        <a href="#contato" class="inline-block pt-2 text-[11px] uppercase tracking-widest text-brand-gold font-medium group-hover:text-brand-dark transition-colors duration-300">Ver Projeto &rarr;</a>
-                    </div>
-                </div>
+<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
 
-                <!-- Card 3: Dormitórios -->
-                <div class="card-premium group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
-                    <div class="overflow-hidden aspect-[4/3] bg-brand-ice">
-                        <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&q=80&w=800" alt="Dormitórios" class="img-zoom w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0">
-                    </div>
-                    <div class="p-8 space-y-3 bg-white relative z-10">
-                        <h3 class="font-premium text-lg text-brand-dark">Dormitórios</h3>
-                        <p class="text-xs text-brand-gray leading-relaxed font-light">Refúgios de tranquilidade projetados para o máximo conforto acústico, térmico e estético.</p>
-                        <a href="#contato" class="inline-block pt-2 text-[11px] uppercase tracking-widest text-brand-gold font-medium group-hover:text-brand-dark transition-colors duration-300">Ver Projeto &rarr;</a>
-                    </div>
-                </div>
+AMBIENTES
 
-                <!-- Card 4: Home Office -->
-                <div class="card-premium group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
-                    <div class="overflow-hidden aspect-[4/3] bg-brand-ice">
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&q=80&w=800" alt="Home Office" class="img-zoom w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0">
-                    </div>
-                    <div class="p-8 space-y-3 bg-white relative z-10">
-                        <h3 class="font-premium text-lg text-brand-dark">Home Office</h3>
-                        <p class="text-xs text-brand-gray leading-relaxed font-light">Ergonomia e minimalismo combinados para criar ambientes de alta produtividade e foco.</p>
-                        <a href="#contato" class="inline-block pt-2 text-[11px] uppercase tracking-widest text-brand-gold font-medium group-hover:text-brand-dark transition-colors duration-300">Ver Projeto &rarr;</a>
-                    </div>
-                </div>
+</span>
 
-                <!-- Card 5: Salas Integradas -->
-                <div class="card-premium group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                    <div class="overflow-hidden aspect-[4/3] bg-brand-ice">
-                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=800" alt="Salas Integradas" class="img-zoom w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0">
-                    </div>
-                    <div class="p-8 space-y-3 bg-white relative z-10">
-                        <h3 class="font-premium text-lg text-brand-dark">Salas Integradas</h3>
-                        <p class="text-xs text-brand-gray leading-relaxed font-light">Fluidez de espaço com painéis pivotantes e transições harmônicas entre living e jantar.</p>
-                        <a href="#contato" class="inline-block pt-2 text-[11px] uppercase tracking-widest text-brand-gold font-medium group-hover:text-brand-dark transition-colors duration-300">Ver Projeto &rarr;</a>
-                    </div>
-                </div>
+<h2 class="font-premium text-4xl md:text-5xl mt-4">
 
-                <!-- Card 6: Painéis e Home Theater / Lavabos -->
-                <div class="card-premium group relative bg-white overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="300">
-                    <div class="overflow-hidden aspect-[4/3] bg-brand-ice">
-                        <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&q=80&w=800" alt="Painéis e Home Theater" class="img-zoom w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0">
-                    </div>
-                    <div class="p-8 space-y-3 bg-white relative z-10">
-                        <h3 class="font-premium text-lg text-brand-dark">Painéis e Home Theater</h3>
-                        <p class="text-xs text-brand-gray leading-relaxed font-light">Ripados nobres, pedras translúcidas e encaixes milimétricos para sistemas de áudio e vídeo premium.</p>
-                        <a href="#contato" class="inline-block pt-2 text-[11px] uppercase tracking-widest text-brand-gold font-medium group-hover:text-brand-dark transition-colors duration-300">Ver Projeto &rarr;</a>
-                    </div>
-                </div>
+Soluções Sob Medida
 
-            </div>
-        </div>
-    </section>
+</h2>
 
-    <!-- SEÇÃO DIFERENCIAIS -->
-    <section class="py-24 bg-brand-dark text-white relative overflow-hidden">
-        <div class="absolute inset-0 bg-[radial-gradient(#222_1px,transparent_1px)] [background-size:16px_16px] opacity-20"></div>
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-            
-            <div class="text-center max-w-2xl mx-auto mb-20 space-y-3">
-                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block">Excelência</span>
-                <h2 class="font-premium text-2xl md:text-4xl text-brand-ice">Por que escolher a Home Interiores?</h2>
-                <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-4"></div>
-            </div>
+</div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
-                
-                <!-- Item 1 -->
-                <div class="space-y-4 border-l border-brand-gold/30 pl-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-brand-gold font-light text-2xl font-premium">01 /</div>
-                    <h3 class="text-sm uppercase tracking-widest font-semibold text-brand-ice">Projeto 100% Personalizado</h3>
-                    <p class="text-xs text-brand-goldlight/70 font-light leading-relaxed">Nossos designers planejam cada milímetro do seu espaço de acordo com sua rotina, sem modulações engessadas.</p>
-                </div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-                <!-- Item 2 -->
-                <div class="space-y-4 border-l border-brand-gold/30 pl-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-brand-gold font-light text-2xl font-premium">02 /</div>
-                    <h3 class="text-sm uppercase tracking-widest font-semibold text-brand-ice">Atendimento Exclusivo</h3>
-                    <p class="text-xs text-brand-goldlight/70 font-light leading-relaxed">Consultoria dedicada do início ao fim. Uma experiência fluida e transparente para arquitetos e clientes finais.</p>
-                </div>
+<!-- CARD -->
+<div class="bg-white overflow-hidden shadow-2xl card-hover">
 
-                <!-- Item 3 -->
-                <div class="space-y-4 border-l border-brand-gold/30 pl-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-brand-gold font-light text-2xl font-premium">03 /</div>
-                    <h3 class="text-sm uppercase tracking-widest font-semibold text-brand-ice">Materiais Premium</h3>
-                    <p class="text-xs text-brand-goldlight/70 font-light leading-relaxed">MDF de alta densidade com tratamentos contra umidade, além de ferragens alemãs e italianas com amortecimento.</p>
-                </div>
+<div class="overflow-hidden h-72">
 
-                <!-- Item 4 -->
-                <div class="space-y-4 border-l border-brand-gold/30 pl-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="text-brand-gold font-light text-2xl font-premium">04 /</div>
-                    <h3 class="text-sm uppercase tracking-widest font-semibold text-brand-ice">Acabamento Impecável</h3>
-                    <p class="text-xs text-brand-goldlight/70 font-light leading-relaxed">Cortes a laser, colagem de borda PUR invisível e lacas com polimento automotivo de alto brilho ou toque fosco aveludado.</p>
-                </div>
+<img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80"
+class="w-full h-full object-cover img-zoom">
 
-                <!-- Item 5 -->
-                <div class="space-y-4 border-l border-brand-gold/30 pl-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-brand-gold font-light text-2xl font-premium">05 /</div>
-                    <h3 class="text-sm uppercase tracking-widest font-semibold text-brand-ice">Tecnologia e Inovação</h3>
-                    <p class="text-xs text-brand-goldlight/70 font-light leading-relaxed">Sistemas automatizados de abertura por toque, organizadores internos inteligentes e integração total com domótica.</p>
-                </div>
+</div>
 
-                <!-- Item 6 -->
-                <div class="space-y-4 border-l border-brand-gold/30 pl-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="text-brand-gold font-light text-2xl font-premium">06 /</div>
-                    <h3 class="text-sm uppercase tracking-widest font-semibold text-brand-ice">Montagem Profissional</h3>
-                    <p class="text-xs text-brand-goldlight/70 font-light leading-relaxed">Equipe própria altamente treinada, que executa o serviço com limpeza, agilidade e extremo respeito ao seu patrimônio.</p>
-                </div>
+<div class="p-8 space-y-4">
 
-            </div>
-        </div>
-    </section>
+<h3 class="font-premium text-2xl">
+Cozinhas Planejadas
+</h3>
 
-    <!-- SEÇÃO SOBRE A EMPRESA -->
-    <section id="sobre" class="py-24 lg:py-32 bg-brand-clay/30">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-                
-                <!-- Image Side -->
-                <div class="lg:col-span-6 order-2 lg:order-1 relative" data-aos="fade-right">
-                    <div class="absolute inset-0 border border-brand-gold translate-x-4 translate-y-4 z-0"></div>
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=1200" alt="Showroom Home Interiores" class="relative z-10 w-full h-auto object-cover shadow-2xl">
-                </div>
+<p class="text-sm text-slate-600 leading-relaxed">
+Projetos sofisticados com integração perfeita entre elegância e funcionalidade.
+</p>
 
-                <!-- Text Side -->
-                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6" data-aos="fade-left">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block">A Marca</span>
-                    <h2 class="font-premium text-3xl md:text-4xl text-brand-dark leading-tight">Criamos Mobiliário Arte Para Ambientes Marcantes</h2>
-                    <p class="text-brand-gray text-sm font-light leading-relaxed">
-                        A <strong>Home Interiores</strong> nasceu do desejo de unir a precisão da engenharia de móveis sob medida à sensibilidade da arquitetura contemporânea de luxo. Especializada no segmento de alto padrão, transformamos ambientes residenciais e corporativos em verdadeiras declarações de sofisticação.
-                    </p>
-                    <p class="text-brand-gray text-sm font-light leading-relaxed">
-                        Com uma equipe experiente composta por projetistas, arquitetos e mestres marceneiros, entregamos soluções funcionais que não abrem mão da elegância estética. Nossa fabricação premium utiliza tecnologia de ponta para garantir durabilidade vitalícia e refinamento nos mínimos detalhes.
-                    </p>
-                    <div class="pt-4">
-                        <a href="#contato" class="inline-flex items-center gap-4 text-xs uppercase tracking-widest font-semibold text-brand-dark hover:text-brand-gold transition-colors duration-300 group">
-                            <span>Conheça nosso Showroom</span>
-                            <span class="group-hover:translate-x-2 transition-transform duration-300">&rarr;</span>
-                        </a>
-                    </div>
-                </div>
+</div>
 
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- GALERIA PREMIUM (Estilo Masonry / Grid Moderno) -->
-    <section id="galeria" class="py-24 lg:py-32 bg-white">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-                <div class="space-y-3">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block">Inspiração</span>
-                    <h2 class="font-premium text-2xl md:text-4xl text-brand-dark">Galeria de Projetos Autorais</h2>
-                </div>
-                <div class="w-20 h-[1px] bg-brand-gold hidden md:block mb-4"></div>
-            </div>
+<!-- CARD -->
+<div class="bg-white overflow-hidden shadow-2xl card-hover">
 
-            <!-- Grid Layout Simulado Masonry Moderno -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-                
-                <div class="md:col-span-7 overflow-hidden relative group aspect-[16/10] bg-brand-ice" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&q=80&w=1000" alt="Cozinha Minimalista" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <div class="text-white space-y-1">
-                            <span class="text-[10px] uppercase tracking-widest text-brand-goldlight">Residência Alphaville</span>
-                            <h4 class="font-premium text-lg">Cozinha Integrada em Conceito Aberto</h4>
-                        </div>
-                    </div>
-                </div>
+<div class="overflow-hidden h-72">
 
-                <div class="md:col-span-5 overflow-hidden relative group aspect-[4/5] md:aspect-auto bg-brand-ice" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&q=80&w=800" alt="Painel Ripado" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <div class="text-white space-y-1">
-                            <span class="text-[10px] uppercase tracking-widest text-brand-goldlight">Apartamento Jardins</span>
-                            <h4 class="font-premium text-lg">Painel Ripado em Nogueira Natural</h4>
-                        </div>
-                    </div>
-                </div>
+<img src="https://images.unsplash.com/photo-1558882224-cca166733360?auto=format&fit=crop&w=1200&q=80"
+class="w-full h-full object-cover img-zoom">
 
-                <div class="md:col-span-4 overflow-hidden relative group aspect-[4/5] md:aspect-auto bg-brand-ice" data-aos="fade-up">
-                    <img src="https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?auto=format&fit=crop&q=80&w=800" alt="Closet Sob Medida" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <div class="text-white space-y-1">
-                            <span class="text-[10px] uppercase tracking-widest text-brand-goldlight">Penthouse Belvedere</span>
-                            <h4 class="font-premium text-lg">Closet Inteligente com Portas de Vidro</h4>
-                        </div>
-                    </div>
-                </div>
+</div>
 
-                <div class="md:col-span-8 overflow-hidden relative group aspect-[16/10] bg-brand-ice" data-aos="fade-up" data-aos-delay="100">
-                    <img src="https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=1000" alt="Sala Contemporânea" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-brand-dark/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <div class="text-white space-y-1">
-                            <span class="text-[10px] uppercase tracking-widest text-brand-goldlight">Mansão da Serra</span>
-                            <h4 class="font-premium text-lg">Mobiliário Contemporâneo para Home Theater</h4>
-                        </div>
-                    </div>
-                </div>
+<div class="p-8 space-y-4">
 
-            </div>
-        </div>
-    </section>
+<h3 class="font-premium text-2xl">
+Closets Luxuosos
+</h3>
 
-    <!-- SEÇÃO PROCESSO -->
-    <section id="processo" class="py-24 bg-brand-offwhite">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            
-            <div class="text-center max-w-2xl mx-auto mb-20 space-y-3">
-                <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block">Jornada</span>
-                <h2 class="font-premium text-2xl md:text-4xl text-brand-dark">Do Sonho à Instalação</h2>
-                <div class="w-12 h-[1px] bg-brand-gold mx-auto mt-4"></div>
-            </div>
+<p class="text-sm text-slate-600 leading-relaxed">
+Organização premium com iluminação elegante e acabamento refinado.
+</p>
 
-            <!-- Timeline -->
-            <div class="relative timeline-line max-w-4xl mx-auto">
-                
-                <!-- Etapa 1 -->
-                <div class="relative md:flex md:justify-between items-center mb-16 md:mb-24 group" data-aos="fade-up">
-                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brand-gold flex items-center justify-center z-10">
-                        <span class="text-[10px] font-bold text-brand-dark">01</span>
-                    </div>
-                    <div class="ml-12 md:ml-0 md:w-[45%] bg-white p-8 border border-black/5 shadow-sm group-hover:shadow-md transition-shadow">
-                        <h3 class="font-premium text-base text-brand-dark mb-2">Atendimento Inicial</h3>
-                        <p class="text-xs text-brand-gray font-light leading-relaxed">Recepção no showroom ou contato digital para entender as primeiras necessidades, metragens estimadas e referências estéticas preferidas.</p>
-                    </div>
-                    <div class="hidden md:block md:w-[45%]"></div>
-                </div>
+</div>
 
-                <!-- Etapa 2 -->
-                <div class="relative md:flex md:justify-between items-center mb-16 md:mb-24 group" data-aos="fade-up">
-                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brand-gold flex items-center justify-center z-10">
-                        <span class="text-[10px] font-bold text-brand-dark">02</span>
-                    </div>
-                    <div class="hidden md:block md:w-[45%]"></div>
-                    <div class="ml-12 md:ml-0 md:w-[45%] bg-white p-8 border border-black/5 shadow-sm group-hover:shadow-md transition-shadow">
-                        <h3 class="font-premium text-base text-brand-dark mb-2">Desenvolvimento do Projeto</h3>
-                        <p class="text-xs text-brand-gray font-light leading-relaxed">Nossa equipe técnica elabora a modelagem em 3D realista focado em ergonomia, otimização extrema de espaço e escolha fina de materiais.</p>
-                    </div>
-                </div>
+</div>
 
-                <!-- Etapa 3 -->
-                <div class="relative md:flex md:justify-between items-center mb-16 md:mb-24 group" data-aos="fade-up">
-                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brand-gold flex items-center justify-center z-10">
-                        <span class="text-[10px] font-bold text-brand-dark">03</span>
-                    </div>
-                    <div class="ml-12 md:ml-0 md:w-[45%] bg-white p-8 border border-black/5 shadow-sm group-hover:shadow-md transition-shadow">
-                        <h3 class="font-premium text-base text-brand-dark mb-2">Produção Personalizada</h3>
-                        <p class="text-xs text-brand-gray font-light leading-relaxed">Envio dos dados para a nossa fábrica automatizada. Cortes milimétricos com maquinário computadorizado de alta fidelidade técnica.</p>
-                    </div>
-                    <div class="hidden md:block md:w-[45%]"></div>
-                </div>
+<!-- CARD -->
+<div class="bg-white overflow-hidden shadow-2xl card-hover">
 
-                <!-- Etapa 4 -->
-                <div class="relative md:flex md:justify-between items-center mb-16 md:mb-24 group" data-aos="fade-up">
-                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-brand-gold flex items-center justify-center z-10">
-                        <span class="text-[10px] font-bold text-brand-dark">04</span>
-                    </div>
-                    <div class="hidden md:block md:w-[45%]"></div>
-                    <div class="ml-12 md:ml-0 md:w-[45%] bg-white p-8 border border-black/5 shadow-sm group-hover:shadow-md transition-shadow">
-                        <h3 class="font-premium text-base text-brand-dark mb-2">Montagem Profissional</h3>
-                        <p class="text-xs text-brand-gray font-light leading-relaxed">Marceneiros experientes efetuam a montagem. Ajustes finais rápidos de dobradiças, calços e alinhamento perfeito de frentes e gavetas.</p>
-                    </div>
-                </div>
+<div class="overflow-hidden h-72">
 
-                <!-- Etapa 5 -->
-                <div class="relative md:flex md:justify-between items-center group" data-aos="fade-up">
-                    <div class="absolute left-0 md:left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-brand-gold flex items-center justify-center z-10 shadow-lg">
-                        <svg class="w-4 h-4 text-brand-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                    </div>
-                    <div class="ml-12 md:ml-0 md:w-[45%] bg-white p-8 border border-brand-gold shadow-sm group-hover:shadow-md transition-shadow">
-                        <h3 class="font-premium text-base text-brand-dark mb-2">Entrega Final</h3>
-                        <p class="text-xs text-brand-gray font-light leading-relaxed">Auditoria completa de qualidade feita junto com o cliente, entrega do termo de garantia estendida e o ambiente pronto para uso.</p>
-                    </div>
-                    <div class="hidden md:block md:w-[45%]"></div>
-                </div>
+<img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80"
+class="w-full h-full object-cover img-zoom">
 
-            </div>
-        </div>
-    </section>
+</div>
 
-    <!-- DEPOIMENTOS (Slider Premium) -->
-    <section class="py-24 bg-white overflow-hidden">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            
-            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block mb-3">Satisfação</span>
-            <h2 class="font-premium text-2xl md:text-4xl text-brand-dark mb-16">O Que Dizem Nossos Clientes</h2>
+<div class="p-8 space-y-4">
 
-            <!-- Swiper Carrossel Container -->
-            <div class="swiper testimonial-swiper pb-12">
-                <div class="swiper-wrapper">
-                    
-                    <!-- Slide 1 -->
-                    <div class="swiper-slide px-4 md:px-16 space-y-6">
-                        <p class="font-premium text-lg md:text-xl italic text-brand-dark/90 leading-relaxed max-w-3xl mx-auto">
-                            "A Home Interiores superou todas as minhas expectativas. O acabamento fosco dos armários da cozinha é absurdo de lindo, não fica marca de dedo e a entrega foi cirúrgica, rigorosamente no prazo."
-                        </p>
-                        <div class="flex items-center justify-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-clay overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=150" alt="Mariana S." class="w-full h-full object-cover">
-                            </div>
-                            <div class="text-left">
-                                <h4 class="text-xs uppercase tracking-widest font-semibold text-brand-dark">Mariana S. Silva</h4>
-                                <span class="text-[10px] text-brand-gray">Arquiteta / Cliente Alphaville</span>
-                            </div>
-                        </div>
-                    </div>
+<h3 class="font-premium text-2xl">
+Dormitórios
+</h3>
 
-                    <!-- Slide 2 -->
-                    <div class="swiper-slide px-4 md:px-16 space-y-6">
-                        <p class="font-premium text-lg md:text-xl italic text-brand-dark/90 leading-relaxed max-w-3xl mx-auto">
-                            "Fiz todo o meu apartamento com eles. Do home office integrado às salas até o closet do casal. Ferragens de uma suavidade indescritível. Vale cada centavo investido pelo nível de luxo e pós-venda."
-                        </p>
-                        <div class="flex items-center justify-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-brand-clay overflow-hidden">
-                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150" alt="Roberto K." class="w-full h-full object-cover">
-                            </div>
-                            <div class="text-left">
-                                <h4 class="text-xs uppercase tracking-widest font-semibold text-brand-dark">Roberto K. Medeiros</h4>
-                                <span class="text-[10px] text-brand-gray">Empresário / Penthouse Savassi</span>
-                            </div>
-                        </div>
-                    </div>
+<p class="text-sm text-slate-600 leading-relaxed">
+Conforto absoluto aliado ao design contemporâneo de alto padrão.
+</p>
 
-                </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination"></div>
-            </div>
+</div>
 
-        </div>
-    </section>
+</div>
 
-    <!-- CTA FINAL & FORMULÁRIO CONTATO -->
-    <section id="contato" class="relative py-24 lg:py-32 bg-brand-dark text-white overflow-hidden">
-        <div class="absolute inset-0 bg-cover bg-center opacity-20 mix-blend-overlay" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80&w=1500');"></div>
-        
-        <div class="relative max-w-7xl mx-auto px-6 lg:px-12 z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
-                
-                <!-- Info Side -->
-                <div class="lg:col-span-5 space-y-6 flex flex-col justify-center" data-aos="fade-right">
-                    <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brand-gold block">Exclusividade</span>
-                    <h2 class="font-premium text-3xl md:text-5xl text-brand-ice leading-tight">Transforme seu ambiente com exclusividade e sofisticação</h2>
-                    <p class="text-brand-goldlight/70 text-xs font-light leading-relaxed max-w-md">
-                        Agende um horário com nossos especialistas. Traga sua planta ou referências e monte um orçamento personalizado sem compromisso.
-                    </p>
-                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/5500000000000?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20m%C3%B3veis%20planejados." 
-                           target="_blank" rel="noopener noreferrer" 
-                           class="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white text-xs uppercase tracking-widest font-semibold px-6 py-4 shadow-lg hover:bg-white hover:text-brand-dark transition-all duration-300">
-                            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.845-4.415 9.849-9.847a9.757 9.757 0 0 0-2.868-6.963 9.757 9.757 0 0 0-6.959-2.87C6.605 2.925 2.19 7.339 2.186 12.77c-.001 1.922.499 3.799 1.448 5.4l-1.031 3.766 3.864-1.013zM18.14 14.8c-.332-.166-1.969-.972-2.271-1.082-.301-.11-.522-.166-.743.166-.221.331-.855 1.082-1.048 1.302-.192.221-.386.248-.718.083-1.748-.875-2.909-1.51-4.07-3.504-.308-.53.308-.492.88-1.632.192-.386.096-.719-.048-1.05-.144-.332-1.217-2.934-1.667-4.015-.439-1.053-.888-.912-1.217-.928-.31-.015-.667-.018-.1.018-.332 0-.871.124-1.326.622-.455.498-1.737 1.698-1.737 4.142 0 2.444 1.779 4.802 2.028 5.134.25.332 3.501 5.347 8.481 7.495 1.185.511 2.111.815 2.833 1.045 1.19.378 2.274.325 3.13.197.954-.142 1.97-.804 2.248-1.542.279-.738.279-1.37.197-1.502-.084-.133-.302-.213-.635-.38z"/></svg>
-                            <span>Falar no WhatsApp</span>
-                        </a>
-                    </div>
-                </div>
+</div>
 
-                <!-- Form Side -->
-                <div class="lg:col-span-7" data-aos="fade-left">
-                    <form class="bg-white/5 backdrop-blur-md p-8 md:p-10 border border-white/10 space-y-6">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="text-[10px] uppercase tracking-widest text-brand-goldlight font-medium block">Nome Completo</label>
-                                <input type="text" required class="w-full bg-white/10 border border-white/10 text-white px-4 py-3 text-xs focus:outline-none focus:border-brand-gold transition-colors font-light">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-[10px] uppercase tracking-widest text-brand-goldlight font-medium block">E-mail</label>
-                                <input type="email" required class="w-full bg-white/10 border border-white/10 text-white px-4 py-3 text-xs focus:outline-none focus:border-brand-gold transition-colors font-light">
-                            </div>
-                        </div>
+</div>
 
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-2">
-                                <label class="text-[10px] uppercase tracking-widest text-brand-goldlight font-medium block">Telefone / WhatsApp</label>
-                                <input type="tel" required class="w-full bg-white/10 border border-white/10 text-white px-4 py-3 text-xs focus:outline-none focus:border-brand-gold transition-colors font-light" placeholder="(00) 00000-0000">
-                            </div>
-                            <div class="space-y-2">
-                                <label class="text-[10px] uppercase tracking-widest text-brand-goldlight font-medium block">Ambiente de Interesse</label>
-                                <select class="w-full bg-[#1e2733] border border-white/10 text-white/80 px-4 py-3 text-xs focus:outline-none focus:border-brand-gold transition-colors font-light">
-                                    <option value="cozinha">Cozinha Planejada</option>
-                                    <option value="closet">Closet Luxo</option>
-                                    <option value="dormitorio">Dormitório Completo</option>
-                                    <option value="sala">Sala ou Home Theater</option>
-                                    <option value="corporativo">Corporativo / Home Office</option>
-                                    <option value="casa">Residência Inteira</option>
-                                </select>
-                            </div>
-                        </div>
+</section>
 
-                        <div class="space-y-2">
-                            <label class="text-[10px] uppercase tracking-widest text-brand-goldlight font-medium block">Fale um pouco sobre o seu projeto (Opcional)</label>
-                            <textarea rows="4" class="w-full bg-white/10 border border-white/10 text-white px-4 py-3 text-xs focus:outline-none focus:border-brand-gold transition-colors font-light resize-none" placeholder="Ex: Apartamento novo na planta, previsão de entrega para o próximo semestre..."></textarea>
-                        </div>
+<!-- DIFERENCIAIS -->
+<section class="py-28 bg-brand-navy relative overflow-hidden">
 
-                        <button type="submit" class="w-full bg-brand-gold text-brand-dark text-xs uppercase tracking-widest font-bold py-4 hover:bg-white hover:text-brand-dark transition-all duration-300">
-                            Enviar Solicitação de Orçamento
-                        </button>
-                    </form>
-                </div>
+<div class="absolute inset-0 opacity-10"
+style="background-image:radial-gradient(#fff 1px,transparent 1px); background-size:18px 18px;"></div>
 
-            </div>
-        </div>
-    </section>
+<div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12">
 
-    <!-- PREMIUM FOOTER -->
-    <footer class="bg-brand-dark text-white/80 border-t border-white/5 py-16 text-xs font-light tracking-wide">
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-            
-            <!-- Col 1: Brand -->
-            <div class="space-y-4">
-                <img src="images/logo.png" alt="Home Interiores" class="h-10 w-auto object-contain brightness-0 invert">
-                <p class="text-[11px] text-brand-goldlight/50 leading-relaxed pt-2">
-                    Mobiliário sob medida de alto padrão para quem exige sofisticação e perfeição geométrica em cada detalhe.
-                </p>
-                <div class="flex items-center gap-4 pt-2">
-                    <a href="https://instagram.com/homeinteriores" target="_blank" rel="noopener noreferrer" class="hover:text-brand-gold transition-colors" aria-label="Siga no Instagram">
-                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
-                    </a>
-                </div>
-            </div>
+<div class="text-center mb-20">
 
-            <!-- Col 2: Links Rápidos -->
-            <div class="space-y-4">
-                <h4 class="text-xs uppercase tracking-widest text-brand-gold font-semibold">Navegação</h4>
-                <ul class="space-y-2.5 text-[11px]">
-                    <li><a href="#" class="hover:text-brand-gold transition-colors">Início</a></li>
-                    <li><a href="#ambientes" class="hover:text-brand-gold transition-colors">Ambientes Planejados</a></li>
-                    <li><a href="#galeria" class="hover:text-brand-gold transition-colors">Galeria de Projetos</a></li>
-                    <li><a href="#sobre" class="hover:text-brand-gold transition-colors">Sobre a Empresa</a></li>
-                    <li><a href="#processo" class="hover:text-brand-gold transition-colors">Nosso Processo</a></li>
-                </ul>
-            </div>
+<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
 
-            <!-- Col 3: Contato -->
-            <div class="space-y-4">
-                <h4 class="text-xs uppercase tracking-widest text-brand-gold font-semibold">Contato</h4>
-                <ul class="space-y-2.5 text-[11px]">
-                    <li>Telefone: (00) 0000-0000</li>
-                    <li>WhatsApp: (00) 00000-0000</li>
-                    <li>E-mail: contato@homeinteriores.com.br</li>
-                    <li>Horário: Seg a Sex: 09h às 19h | Sáb: 09h às 14h</li>
-                </ul>
-            </div>
+EXCELÊNCIA
 
-            <!-- Col 4: Endereço -->
-            <div class="space-y-4">
-                <h4 class="text-xs uppercase tracking-widest text-brand-gold font-semibold">Showroom</h4>
-                <p class="text-[11px] leading-relaxed text-white/60">
-                    Av. das Américas, 10000 - Barra da Tijuca<br>
-                    Rio de Janeiro - RJ<br>
-                    CEP: 22640-100
-                </p>
-            </div>
+</span>
 
-        </div>
+<h2 class="font-premium text-4xl md:text-5xl mt-4">
 
-        <!-- Linha Final de Direitos -->
-        <div class="max-w-7xl mx-auto px-6 lg:px-12 mt-16 pt-8 border-t border-white/5 text-center text-[10px] text-white/40 uppercase tracking-widest flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div>&copy; 2026 HOME INTERIORES - MÓVEIS SOB MEDIDA. TODOS OS DIREITOS RESERVADOS.</div>
-            <div>CNPJ: 00.000.000/0001-00</div>
-        </div>
-    </footer>
+Por que escolher a HOME INTERIORES?
 
-    <!-- AOS Animation Library & Swiper JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
-    <script>
-        // Inicializar animações AOS
-        AOS.init({
-            once: true,
-            duration: 800,
-            easing: 'ease-out-cubic'
-        });
+</h2>
 
-        // Inicializar Carrossel de Depoimentos
-        const swiper = new Swiper('.testimonial-swiper', {
-            loop: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-        });
+</div>
 
-        // Controle Menu Mobile
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
 
-        menuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
+<div class="border-l border-brand-gold pl-6 space-y-4">
 
-        // Fechar menu mobile ao clicar em um link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+<h3 class="font-premium text-2xl text-brand-gold">
+01
+</h3>
 
-        // Efeito Header mudar de estilo ao dar scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.remove('bg-white/70');
-                header.classList.add('bg-white/95', 'shadow-md');
-            } else {
-                header.classList.remove('bg-white/95', 'shadow-md');
-                header.classList.add('bg-white/70');
-            }
-        });
-    </script>
+<h4 class="uppercase tracking-[0.2em] text-sm font-semibold">
+Projeto Exclusivo
+</h4>
+
+<p class="text-white/70 text-sm leading-relaxed">
+Cada ambiente é planejado de forma única para refletir personalidade e sofisticação.
+</p>
+
+</div>
+
+<div class="border-l border-brand-gold pl-6 space-y-4">
+
+<h3 class="font-premium text-2xl text-brand-gold">
+02
+</h3>
+
+<h4 class="uppercase tracking-[0.2em] text-sm font-semibold">
+Acabamento Premium
+</h4>
+
+<p class="text-white/70 text-sm leading-relaxed">
+Detalhes impecáveis com ferragens sofisticadas e materiais de alto padrão.
+</p>
+
+</div>
+
+<div class="border-l border-brand-gold pl-6 space-y-4">
+
+<h3 class="font-premium text-2xl text-brand-gold">
+03
+</h3>
+
+<h4 class="uppercase tracking-[0.2em] text-sm font-semibold">
+Atendimento Personalizado
+</h4>
+
+<p class="text-white/70 text-sm leading-relaxed">
+Consultoria dedicada do início ao fim do seu projeto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+<section id="galeria"
+class="py-28 bg-white text-brand-navy">
+
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+<div class="text-center mb-20">
+
+<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
+
+PROJETOS
+
+</span>
+
+<h2 class="font-premium text-4xl md:text-5xl mt-4">
+
+Galeria Premium
+
+</h2>
+
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+
+<div class="md:col-span-7 overflow-hidden">
+
+<img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1400&q=80"
+class="w-full h-full object-cover hover:scale-105 transition duration-700">
+
+</div>
+
+<div class="md:col-span-5 overflow-hidden">
+
+<img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=1200&q=80"
+class="w-full h-full object-cover hover:scale-105 transition duration-700">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section id="sobre"
+class="py-28 bg-brand-offwhite text-brand-navy">
+
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+<div class="grid lg:grid-cols-2 gap-20 items-center">
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1400&q=80"
+class="w-full shadow-2xl">
+
+</div>
+
+<div class="space-y-8">
+
+<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
+
+A EMPRESA
+
+</span>
+
+<h2 class="font-premium text-4xl md:text-5xl">
+
+Criamos móveis que transformam ambientes
+
+</h2>
+
+<p class="text-slate-700 leading-relaxed">
+
+A HOME INTERIORES é especializada em móveis planejados de alto padrão,
+combinando sofisticação, funcionalidade e acabamento premium.
+
+</p>
+
+<p class="text-slate-700 leading-relaxed">
+
+Desenvolvemos projetos exclusivos para cozinhas, dormitórios,
+closets, salas integradas e ambientes corporativos.
+
+</p>
+
+<a href="#contato"
+class="inline-flex bg-brand-gold text-brand-navy px-8 py-5 uppercase tracking-[0.25em] text-xs font-bold hover:bg-brand-navy hover:text-white transition-all duration-300">
+
+Conhecer Showroom
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTATO -->
+<section id="contato"
+class="relative py-28 overflow-hidden">
+
+<div class="absolute inset-0">
+
+<img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=80"
+class="w-full h-full object-cover">
+
+</div>
+
+<div class="absolute inset-0 hero-overlay"></div>
+
+<div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+
+<div class="space-y-8">
+
+<span class="text-brand-gold uppercase tracking-[0.3em] text-xs font-semibold">
+
+ORÇAMENTO
+
+</span>
+
+<h2 class="font-premium text-4xl md:text-6xl">
+
+Solicite Seu Projeto
+
+</h2>
+
+<p class="text-white/80 max-w-2xl mx-auto">
+
+Entre em contato e transforme seu ambiente com exclusividade e sofisticação.
+
+</p>
+
+<form class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-10">
+
+<input type="text"
+placeholder="Nome"
+class="bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50">
+
+<input type="email"
+placeholder="E-mail"
+class="bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50">
+
+<input type="tel"
+placeholder="Telefone"
+class="bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50">
+
+<select class="bg-brand-navysoft border border-white/20 px-6 py-4 outline-none text-white">
+
+<option>Cozinha Planejada</option>
+<option>Closet</option>
+<option>Dormitório</option>
+<option>Sala</option>
+
+</select>
+
+<textarea rows="5"
+placeholder="Fale sobre seu projeto..."
+class="md:col-span-2 bg-white/10 border border-white/20 px-6 py-4 outline-none text-white placeholder:text-white/50"></textarea>
+
+<button
+class="md:col-span-2 bg-brand-gold text-brand-navy py-5 uppercase tracking-[0.25em] text-xs font-bold hover:bg-white transition-all duration-300">
+
+Enviar Solicitação
+
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-brand-navy border-t border-white/10 py-14">
+
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+<div class="space-y-5">
+
+<img src="images/LOGOMOVEIS.png"
+class="h-16 object-contain">
+
+<p class="text-white/60 text-sm leading-relaxed">
+
+Móveis planejados premium para ambientes sofisticados.
+
+</p>
+
+</div>
+
+<div class="space-y-4">
+
+<h3 class="uppercase tracking-[0.2em] text-xs text-brand-gold font-semibold">
+
+Navegação
+
+</h3>
+
+<ul class="space-y-3 text-sm text-white/70">
+
+<li><a href="#">Home</a></li>
+<li><a href="#ambientes">Ambientes</a></li>
+<li><a href="#galeria">Projetos</a></li>
+<li><a href="#sobre">Sobre</a></li>
+
+</ul>
+
+</div>
+
+<div class="space-y-4">
+
+<h3 class="uppercase tracking-[0.2em] text-xs text-brand-gold font-semibold">
+
+Contato
+
+</h3>
+
+<ul class="space-y-3 text-sm text-white/70">
+
+<li>(00) 00000-0000</li>
+<li>contato@homeinteriores.com.br</li>
+<li>Seg a Sex — 09h às 19h</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<div class="border-t border-white/10 mt-14 pt-8 text-center text-white/40 text-xs uppercase tracking-[0.2em]">
+
+© 2026 HOME INTERIORES — TODOS OS DIREITOS RESERVADOS
+
+</div>
+
+</div>
+
+</footer>
+
+<script>
+
+window.addEventListener('scroll', () => {
+
+const header = document.getElementById('header');
+
+if(window.scrollY > 50){
+
+header.classList.remove('bg-brand-navy/70');
+
+header.classList.add('bg-brand-navy');
+
+}else{
+
+header.classList.remove('bg-brand-navy');
+
+header.classList.add('bg-brand-navy/70');
+
+}
+
+});
+
+</script>
+
 </body>
 </html>
