@@ -7,477 +7,211 @@
 
 <title>HOME INTERIORES | Móveis Planejados Premium</title>
 
-<meta name="description"
-content="HOME INTERIORES - Móveis planejados premium, MDF, ferragens e projetos sofisticados sob medida." />
+<meta name="description" content="HOME INTERIORES - Móveis planejados premium, cozinhas planejadas, closets, dormitórios, home office e projetos exclusivos de alto padrão." />
+
+<meta name="keywords" content="móveis planejados, móveis sob medida, marcenaria premium, design de interiores, cozinha planejada, closet planejado" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-background:#f8fafc;
-overflow-x:hidden;
+    background:#f7f5f2;
+    color:#1f1f1f;
+    overflow-x:hidden;
 }
 
-.hero-bg{
-background:
-linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop');
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
+.hero-overlay{
+    background:rgba(0,0,0,0.45);
 }
 
 .glass{
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-border:1px solid rgba(255,255,255,.12);
-}
-
-.card-hover{
-transition:.4s;
-}
-
-.card-hover:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(0,0,0,.18);
-}
-
-.whatsapp-float{
-position:fixed;
-bottom:25px;
-right:25px;
-width:65px;
-height:65px;
-border-radius:50%;
-background:#25D366;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-color:#fff;
-z-index:999;
-box-shadow:0 10px 25px rgba(0,0,0,.25);
-}
-
-.whatsapp-float:hover{
-transform:scale(1.08);
-transition:.3s;
+    backdrop-filter:blur(14px);
+    background:rgba(255,255,255,0.08);
 }
 
 .section-title{
-position:relative;
-display:inline-block;
+    font-size:3rem;
+    font-weight:700;
+    color:#1d1d1d;
 }
 
-.section-title::after{
-content:'';
-position:absolute;
-left:0;
-bottom:-10px;
-width:60%;
-height:4px;
-background:#0f1d63;
-border-radius:999px;
+.gold{
+    color:#c7a36a;
+}
+
+.btn-primary{
+    background:#c7a36a;
+    color:#fff;
+    padding:14px 32px;
+    border-radius:999px;
+    transition:.4s;
+    font-weight:600;
+}
+
+.btn-primary:hover{
+    background:#b58c52;
+    transform:translateY(-3px);
+}
+
+.btn-outline{
+    border:1px solid #fff;
+    color:#fff;
+    padding:14px 32px;
+    border-radius:999px;
+    transition:.4s;
+}
+
+.btn-outline:hover{
+    background:#fff;
+    color:#000;
+}
+
+.card-hover{
+    transition:.5s;
+}
+
+.card-hover:hover{
+    transform:translateY(-10px);
+}
+
+.gallery img{
+    transition:.5s;
+}
+
+.gallery img:hover{
+    transform:scale(1.05);
+}
+
+.timeline-line{
+    width:2px;
+    background:#c7a36a;
+}
+
+.whatsapp-float{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+    z-index:999;
+}
+
+.swiper{
+    padding-bottom:60px;
+}
+
+.swiper-pagination-bullet-active{
+    background:#c7a36a !important;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<!-- WHATSAPP FLUTUANTE -->
-
-<a href="https://wa.me/5531999999999"
-class="whatsapp-float"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
 <!-- HEADER -->
+<header class="fixed top-0 left-0 w-full z-50 glass">
 
-<header class="fixed top-0 left-0 w-full z-50 bg-[#08134d]/95 backdrop-blur-md shadow-lg">
+<div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
 
-<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
 
-<div class="flex items-center gap-4">
+<img src="images/logo.png" alt="HOME INTERIORES" class="h-12">
 
-<img
-src="https://i.imgur.com/N0Q6V7T.png"
-class="w-20"
-alt="HOME INTERIORES">
-
-<div>
-
-<h1 class="text-white font-bold text-2xl">
+<h1 class="text-white text-2xl font-bold tracking-widest">
 HOME INTERIORES
 </h1>
 
-<p class="text-gray-300 text-sm">
-Móveis Sob Medida
-</p>
-
 </div>
 
-</div>
+<nav class="hidden lg:flex gap-10 text-white font-medium">
 
-<nav class="hidden lg:flex gap-8 text-white font-medium">
-
-<a href="#inicio" class="hover:text-gray-300">Início</a>
-<a href="#sobre" class="hover:text-gray-300">Sobre</a>
-<a href="#catalogo" class="hover:text-gray-300">Catálogo MDF</a>
-<a href="#ambientes" class="hover:text-gray-300">Ambientes</a>
-<a href="#ferragens" class="hover:text-gray-300">Ferragens</a>
-<a href="#projetos" class="hover:text-gray-300">Projetos</a>
-<a href="#contato" class="hover:text-gray-300">Contato</a>
+<a href="#home" class="hover:text-[#c7a36a] transition">Home</a>
+<a href="#ambientes" class="hover:text-[#c7a36a] transition">Ambientes</a>
+<a href="#projetos" class="hover:text-[#c7a36a] transition">Projetos</a>
+<a href="#sobre" class="hover:text-[#c7a36a] transition">Sobre</a>
+<a href="#blog" class="hover:text-[#c7a36a] transition">Blog</a>
+<a href="#contato" class="hover:text-[#c7a36a] transition">Contato</a>
 
 </nav>
 
-<a href="https://wa.me/5531999999999"
-target="_blank"
-class="hidden lg:flex bg-white text-[#08134d] px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
+<div class="flex items-center gap-4">
 
-Solicitar Orçamento
-
+<a href="https://instagram.com/homeinteriores" target="_blank"
+class="text-white hover:text-[#c7a36a] text-xl">
+📷
 </a>
+
+<a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20móveis%20planejados."
+class="btn-primary hidden md:flex">
+Solicitar Projeto
+</a>
+
+</div>
 
 </div>
 
 </header>
 
 <!-- HERO -->
+<section id="home"
+class="relative h-screen flex items-center justify-center overflow-hidden">
 
-<section id="inicio"
-class="hero-bg min-h-screen flex items-center justify-center text-center text-white px-6">
+<img src="images/logo.png"
+class="absolute inset-0 w-full h-full object-cover scale-110"
+alt="Ambiente planejado">
 
-<div class="max-w-4xl">
+<div class="absolute inset-0 hero-overlay"></div>
 
-<h2 class="text-5xl md:text-7xl font-extrabold leading-tight mb-8">
+<div class="relative z-10 text-center px-6 max-w-5xl">
 
-Transformamos Ambientes em Experiências Sofisticadas
+<h2
+data-aos="fade-up"
+class="text-white text-5xl md:text-7xl font-bold leading-tight mb-8">
 
-</h2>
-
-<p class="text-xl md:text-2xl text-gray-200 mb-10">
-
-Móveis planejados premium com acabamento impecável, design moderno e materiais de alto padrão.
-
-</p>
-
-<div class="flex flex-wrap justify-center gap-5">
-
-<a href="https://wa.me/5531999999999"
-target="_blank"
-class="bg-[#08134d] hover:bg-[#13268a] px-8 py-4 rounded-full text-lg font-semibold transition">
-
-Solicitar Projeto
-
-</a>
-
-<a href="#catalogo"
-class="border border-white hover:bg-white hover:text-black px-8 py-4 rounded-full text-lg font-semibold transition">
-
-Ver Catálogo
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SOBRE -->
-
-<section id="sobre" class="py-24 bg-white">
-
-<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-
-<div>
-
-<h2 class="section-title text-4xl font-bold text-[#08134d] mb-10">
-
-Sobre a HOME INTERIORES
+Projetos exclusivos que transformam ambientes em experiências
 
 </h2>
 
-<p class="text-gray-700 text-lg leading-9 mb-8">
+<p
+data-aos="fade-up"
+data-aos-delay="200"
+class="text-gray-200 text-xl md:text-2xl mb-10">
 
-A HOME INTERIORES é especializada em móveis planejados premium,
-projetos personalizados, MDF de alta qualidade e soluções completas
-para ambientes sofisticados.
-
-</p>
-
-<p class="text-gray-700 text-lg leading-9">
-
-Com acabamento refinado, ferragens profissionais e atendimento
-personalizado, transformamos sonhos em ambientes modernos,
-funcionais e elegantes.
+Móveis planejados sofisticados, funcionais e personalizados para transformar seu espaço com elegância e exclusividade.
 
 </p>
 
-</div>
+<div
+data-aos="fade-up"
+data-aos-delay="400"
+class="flex flex-wrap justify-center gap-5">
 
-<div>
-
-<img
-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2070&auto=format&fit=crop"
-class="rounded-3xl shadow-2xl"
-loading="lazy">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- DIFERENCIAIS -->
-
-<section class="py-24 bg-gray-100">
-
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="text-center mb-16">
-
-<h2 class="section-title text-4xl font-bold text-[#08134d] inline-block">
-
-Nossos Diferenciais
-
-</h2>
-
-</div>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<div class="bg-white rounded-3xl p-10 shadow-xl card-hover">
-
-<i class="fa-solid fa-pen-ruler text-5xl text-[#08134d] mb-6"></i>
-
-<h3 class="font-bold text-2xl mb-4">
-Projeto Personalizado
-</h3>
-
-<p class="text-gray-600">
-Ambientes exclusivos feitos sob medida.
-</p>
-
-</div>
-
-<div class="bg-white rounded-3xl p-10 shadow-xl card-hover">
-
-<i class="fa-solid fa-layer-group text-5xl text-[#08134d] mb-6"></i>
-
-<h3 class="font-bold text-2xl mb-4">
-MDF Premium
-</h3>
-
-<p class="text-gray-600">
-Materiais sofisticados e modernos.
-</p>
-
-</div>
-
-<div class="bg-white rounded-3xl p-10 shadow-xl card-hover">
-
-<i class="fa-solid fa-screwdriver-wrench text-5xl text-[#08134d] mb-6"></i>
-
-<h3 class="font-bold text-2xl mb-4">
-Ferragens Profissionais
-</h3>
-
-<p class="text-gray-600">
-Qualidade e durabilidade garantidas.
-</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CATÁLOGO MDF -->
-
-<section id="catalogo" class="py-24 bg-white">
-
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="text-center mb-16">
-
-<h2 class="section-title text-4xl font-bold text-[#08134d] inline-block">
-
-Catálogo Premium MDF & Madeiras
-
-</h2>
-
-</div>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-<!-- PRODUTO -->
-
-<div class="bg-white rounded-3xl overflow-hidden shadow-2xl card-hover">
-
-<img
-src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop"
-class="h-60 w-full object-cover"
-loading="lazy">
-
-<div class="p-6">
-
-<h3 class="font-bold text-2xl mb-3">
-Carvalho Hanover
-</h3>
-
-<p class="text-gray-600 mb-6">
-MDF madeirado sofisticado para móveis premium.
-</p>
-
-<a href="https://wa.me/5531999999999?text=Olá,%20tenho%20interesse%20no%20material%20Carvalho%20Hanover"
-target="_blank"
-class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full flex items-center justify-center gap-3 font-semibold transition">
-
-<i class="fab fa-whatsapp"></i>
-
-Solicitar no WhatsApp
-
+<a href="https://wa.me/5500000000000"
+class="btn-primary">
+Solicitar orçamento
 </a>
 
-</div>
-
-</div>
-
-<!-- PRODUTO -->
-
-<div class="bg-white rounded-3xl overflow-hidden shadow-2xl card-hover">
-
-<img
-src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop"
-class="h-60 w-full object-cover"
-loading="lazy">
-
-<div class="p-6">
-
-<h3 class="font-bold text-2xl mb-3">
-Freijó Natural
-</h3>
-
-<p class="text-gray-600 mb-6">
-Acabamento elegante e moderno.
-</p>
-
-<a href="https://wa.me/5531999999999?text=Olá,%20tenho%20interesse%20no%20material%20Freijó%20Natural"
-target="_blank"
-class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full flex items-center justify-center gap-3 font-semibold transition">
-
-<i class="fab fa-whatsapp"></i>
-
-Solicitar no WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-<!-- PRODUTO -->
-
-<div class="bg-white rounded-3xl overflow-hidden shadow-2xl card-hover">
-
-<img
-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
-class="h-60 w-full object-cover"
-loading="lazy">
-
-<div class="p-6">
-
-<h3 class="font-bold text-2xl mb-3">
-Nogueira Málaga
-</h3>
-
-<p class="text-gray-600 mb-6">
-Textura premium e acabamento refinado.
-</p>
-
-<a href="https://wa.me/5531999999999?text=Olá,%20tenho%20interesse%20no%20material%20Nogueira%20Málaga"
-target="_blank"
-class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full flex items-center justify-center gap-3 font-semibold transition">
-
-<i class="fab fa-whatsapp"></i>
-
-Solicitar no WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-<!-- PRODUTO -->
-
-<div class="bg-white rounded-3xl overflow-hidden shadow-2xl card-hover">
-
-<img
-src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
-class="h-60 w-full object-cover"
-loading="lazy">
-
-<div class="p-6">
-
-<h3 class="font-bold text-2xl mb-3">
-Branco TX
-</h3>
-
-<p class="text-gray-600 mb-6">
-Acabamento clean e sofisticado.
-</p>
-
-<a href="https://wa.me/5531999999999?text=Olá,%20tenho%20interesse%20no%20material%20Branco%20TX"
-target="_blank"
-class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full flex items-center justify-center gap-3 font-semibold transition">
-
-<i class="fab fa-whatsapp"></i>
-
-Solicitar no WhatsApp
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="text-center mt-16">
-
-<a href="https://wa.me/5531999999999"
-target="_blank"
-class="bg-[#08134d] hover:bg-[#12267e] text-white px-10 py-4 rounded-full font-semibold text-lg transition">
-
-Solicitar Catálogo Completo
-
+<a href="#ambientes"
+class="btn-outline">
+Ver ambientes
 </a>
 
 </div>
@@ -487,203 +221,423 @@ Solicitar Catálogo Completo
 </section>
 
 <!-- AMBIENTES -->
-
-<section id="ambientes" class="py-24 bg-gray-100">
-
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="text-center mb-16">
-
-<h2 class="section-title text-4xl font-bold text-[#08134d] inline-block">
-
-Ambientes Planejados
-
-</h2>
-
-</div>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop"
-class="rounded-3xl shadow-xl h-80 w-full object-cover">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
-class="rounded-3xl shadow-xl h-80 w-full object-cover">
-
-<img src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
-class="rounded-3xl shadow-xl h-80 w-full object-cover">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- FERRAGENS -->
-
-<section id="ferragens" class="py-24 bg-white">
+<section id="ambientes" class="py-28 bg-[#f7f5f2]">
 
 <div class="max-w-7xl mx-auto px-6">
 
-<div class="text-center mb-16">
+<div class="text-center mb-20">
 
-<h2 class="section-title text-4xl font-bold text-[#08134d] inline-block">
-
-Ferragens Premium
-
+<h2 class="section-title">
+Ambientes <span class="gold">Planejados</span>
 </h2>
 
-</div>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
-<div class="bg-gray-100 rounded-3xl p-10 text-center card-hover">
-<h3 class="font-bold text-2xl">Corrediças</h3>
-</div>
-
-<div class="bg-gray-100 rounded-3xl p-10 text-center card-hover">
-<h3 class="font-bold text-2xl">Dobradiças</h3>
-</div>
-
-<div class="bg-gray-100 rounded-3xl p-10 text-center card-hover">
-<h3 class="font-bold text-2xl">Puxadores</h3>
-</div>
-
-<div class="bg-gray-100 rounded-3xl p-10 text-center card-hover">
-<h3 class="font-bold text-2xl">Sistemas Deslizantes</h3>
-</div>
+<p class="text-gray-500 mt-5 text-lg">
+Projetos sofisticados desenvolvidos para cada estilo de vida.
+</p>
 
 </div>
 
-</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-</section>
+<!-- CARD -->
+<div data-aos="fade-up"
+class="bg-white rounded-[30px] overflow-hidden shadow-xl card-hover">
 
-<!-- PROJETOS -->
+<img src="images/logo.png"
+class="w-full h-72 object-cover">
 
-<section id="projetos" class="py-24 bg-[#08134d] text-white">
+<div class="p-8">
 
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="text-center mb-16">
-
-<h2 class="text-5xl font-bold">
-
-Projetos Realizados
-
-</h2>
-
-</div>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<div class="overflow-hidden rounded-3xl shadow-2xl">
-
-<img
-src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop"
-class="h-96 w-full object-cover hover:scale-110 transition duration-700">
-
-</div>
-
-<div class="overflow-hidden rounded-3xl shadow-2xl">
-
-<img
-src="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop"
-class="h-96 w-full object-cover hover:scale-110 transition duration-700">
-
-</div>
-
-<div class="overflow-hidden rounded-3xl shadow-2xl">
-
-<img
-src="https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop"
-class="h-96 w-full object-cover hover:scale-110 transition duration-700">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTATO -->
-
-<section id="contato" class="py-24 bg-white">
-
-<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16">
-
-<div>
-
-<h2 class="section-title text-4xl font-bold text-[#08134d] mb-10">
-
-Entre em Contato
-
-</h2>
-
-<form class="space-y-6">
-
-<input
-type="text"
-placeholder="Seu Nome"
-class="w-full border border-gray-300 rounded-2xl px-6 py-4 outline-none focus:border-[#08134d]">
-
-<input
-type="email"
-placeholder="Seu E-mail"
-class="w-full border border-gray-300 rounded-2xl px-6 py-4 outline-none focus:border-[#08134d]">
-
-<textarea
-placeholder="Sua Mensagem"
-rows="5"
-class="w-full border border-gray-300 rounded-2xl px-6 py-4 outline-none focus:border-[#08134d]"></textarea>
-
-<button
-class="bg-[#08134d] hover:bg-[#13268a] text-white px-8 py-4 rounded-full font-semibold transition">
-
-Enviar Mensagem
-
-</button>
-
-</form>
-
-</div>
-
-<div class="space-y-8">
-
-<div class="bg-gray-100 rounded-3xl p-8">
-
-<h3 class="font-bold text-2xl mb-5 text-[#08134d]">
-Contato
+<h3 class="text-2xl font-bold mb-4">
+Cozinhas Planejadas
 </h3>
 
-<p class="text-lg mb-4">
-<i class="fab fa-whatsapp text-green-500"></i>
-(31) 99999-9999
+<p class="text-gray-500 mb-6">
+Elegância, funcionalidade e design contemporâneo.
 </p>
 
-<p class="text-lg mb-4">
-<i class="fab fa-instagram text-pink-500"></i>
-@homeinteriores
-</p>
-
-<p class="text-lg">
-<i class="fa-solid fa-envelope text-[#08134d]"></i>
-contato@homeinteriores.com.br
-</p>
+<a href="#" class="gold font-semibold">
+Ver Projeto →
+</a>
 
 </div>
 
-<iframe
-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15012.93071191302!2d-44.576!3d-20.075"
-width="100%"
-height="320"
-style="border:0;"
-allowfullscreen=""
-loading="lazy"
-class="rounded-3xl shadow-xl">
+</div>
 
-</iframe>
+<!-- CARD -->
+<div data-aos="fade-up" data-aos-delay="100"
+class="bg-white rounded-[30px] overflow-hidden shadow-xl card-hover">
+
+<img src="images/logo.png"
+class="w-full h-72 object-cover">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Closets Luxuosos
+</h3>
+
+<p class="text-gray-500 mb-6">
+Organização premium com acabamento impecável.
+</p>
+
+<a href="#" class="gold font-semibold">
+Ver Projeto →
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+<div data-aos="fade-up" data-aos-delay="200"
+class="bg-white rounded-[30px] overflow-hidden shadow-xl card-hover">
+
+<img src="images/logo.png"
+class="w-full h-72 object-cover">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Home Office
+</h3>
+
+<p class="text-gray-500 mb-6">
+Ambientes modernos para produtividade e conforto.
+</p>
+
+<a href="#" class="gold font-semibold">
+Ver Projeto →
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+<div data-aos="fade-up"
+class="bg-white rounded-[30px] overflow-hidden shadow-xl card-hover">
+
+<img src="images/logo.png"
+class="w-full h-72 object-cover">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Dormitórios
+</h3>
+
+<p class="text-gray-500 mb-6">
+Projetos sofisticados para máximo conforto.
+</p>
+
+<a href="#" class="gold font-semibold">
+Ver Projeto →
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+<div data-aos="fade-up"
+class="bg-white rounded-[30px] overflow-hidden shadow-xl card-hover">
+
+<img src="images/logo.png"
+class="w-full h-72 object-cover">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Salas Integradas
+</h3>
+
+<p class="text-gray-500 mb-6">
+Integração elegante com design contemporâneo.
+</p>
+
+<a href="#" class="gold font-semibold">
+Ver Projeto →
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD -->
+<div data-aos="fade-up"
+class="bg-white rounded-[30px] overflow-hidden shadow-xl card-hover">
+
+<img src="images/logo.png"
+class="w-full h-72 object-cover">
+
+<div class="p-8">
+
+<h3 class="text-2xl font-bold mb-4">
+Painéis e Home Theater
+</h3>
+
+<p class="text-gray-500 mb-6">
+Sofisticação moderna para sua sala.
+</p>
+
+<a href="#" class="gold font-semibold">
+Ver Projeto →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="py-28 bg-[#111] text-white">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-20">
+
+<h2 class="section-title text-white">
+Nossos <span class="gold">Diferenciais</span>
+</h2>
+
+</div>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+<div class="bg-[#1d1d1d] p-10 rounded-[30px]">
+<h3 class="text-2xl font-bold mb-4 gold">Projeto Personalizado</h3>
+<p class="text-gray-400">Cada ambiente criado exclusivamente para você.</p>
+</div>
+
+<div class="bg-[#1d1d1d] p-10 rounded-[30px]">
+<h3 class="text-2xl font-bold mb-4 gold">Materiais Premium</h3>
+<p class="text-gray-400">Acabamentos sofisticados e alta durabilidade.</p>
+</div>
+
+<div class="bg-[#1d1d1d] p-10 rounded-[30px]">
+<h3 class="text-2xl font-bold mb-4 gold">Montagem Profissional</h3>
+<p class="text-gray-400">Equipe especializada e excelência em cada detalhe.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="py-28">
+
+<div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+<div data-aos="fade-right">
+
+<img src="images/logo.png"
+class="rounded-[40px] shadow-2xl w-full">
+
+</div>
+
+<div data-aos="fade-left">
+
+<h2 class="section-title mb-8">
+Sobre a <span class="gold">HOME INTERIORES</span>
+</h2>
+
+<p class="text-gray-600 text-lg leading-9 mb-8">
+
+Somos especialistas em móveis planejados de alto padrão, criando projetos exclusivos que unem funcionalidade, sofisticação e design contemporâneo.
+
+Nossa equipe é formada por arquitetos, designers e profissionais apaixonados por transformar ambientes em experiências únicas.
+
+</p>
+
+<a href="https://wa.me/5500000000000"
+class="btn-primary">
+Falar com Especialista
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERIA -->
+<section id="projetos" class="py-28 bg-[#f3f1ed]">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-20">
+
+<h2 class="section-title">
+Galeria <span class="gold">Premium</span>
+</h2>
+
+</div>
+
+<div class="columns-1 md:columns-2 lg:columns-3 gap-6 gallery">
+
+<img src="images/logo.png" class="rounded-3xl mb-6">
+<img src="images/logo.png" class="rounded-3xl mb-6">
+<img src="images/logo.png" class="rounded-3xl mb-6">
+<img src="images/logo.png" class="rounded-3xl mb-6">
+<img src="images/logo.png" class="rounded-3xl mb-6">
+<img src="images/logo.png" class="rounded-3xl mb-6">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESSO -->
+<section class="py-28">
+
+<div class="max-w-5xl mx-auto px-6">
+
+<div class="text-center mb-20">
+
+<h2 class="section-title">
+Nosso <span class="gold">Processo</span>
+</h2>
+
+</div>
+
+<div class="space-y-14">
+
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full bg-[#c7a36a] text-white flex items-center justify-center text-2xl font-bold">1</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">Atendimento Inicial</h3>
+<p class="text-gray-500">Entendimento completo das necessidades do cliente.</p>
+</div>
+</div>
+
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full bg-[#c7a36a] text-white flex items-center justify-center text-2xl font-bold">2</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">Desenvolvimento do Projeto</h3>
+<p class="text-gray-500">Projetos exclusivos com design sofisticado.</p>
+</div>
+</div>
+
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full bg-[#c7a36a] text-white flex items-center justify-center text-2xl font-bold">3</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">Produção Personalizada</h3>
+<p class="text-gray-500">Materiais premium e acabamento impecável.</p>
+</div>
+</div>
+
+<div class="flex gap-8 items-start">
+<div class="w-16 h-16 rounded-full bg-[#c7a36a] text-white flex items-center justify-center text-2xl font-bold">4</div>
+<div>
+<h3 class="text-2xl font-bold mb-2">Montagem Profissional</h3>
+<p class="text-gray-500">Equipe especializada garantindo perfeição.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="py-28 bg-[#111] text-white">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="text-center mb-20">
+
+<h2 class="section-title text-white">
+Clientes <span class="gold">Satisfeitos</span>
+</h2>
+
+</div>
+
+<div class="swiper mySwiper">
+
+<div class="swiper-wrapper">
+
+<div class="swiper-slide">
+<div class="bg-[#1d1d1d] p-10 rounded-[30px]">
+<p class="text-gray-300 text-lg mb-8">
+“Projeto impecável, acabamento perfeito e atendimento excepcional.”
+</p>
+<h4 class="gold font-bold text-xl">
+Mariana Souza
+</h4>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="bg-[#1d1d1d] p-10 rounded-[30px]">
+<p class="text-gray-300 text-lg mb-8">
+“A HOME INTERIORES superou todas as expectativas.”
+</p>
+<h4 class="gold font-bold text-xl">
+Carlos Mendes
+</h4>
+</div>
+</div>
+
+<div class="swiper-slide">
+<div class="bg-[#1d1d1d] p-10 rounded-[30px]">
+<p class="text-gray-300 text-lg mb-8">
+“Design sofisticado e móveis extremamente elegantes.”
+</p>
+<h4 class="gold font-bold text-xl">
+Fernanda Alves
+</h4>
+</div>
+</div>
+
+</div>
+
+<div class="swiper-pagination"></div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+<section class="py-32 relative overflow-hidden">
+
+<div class="absolute inset-0">
+<img src="images/logo.png"
+class="w-full h-full object-cover">
+</div>
+
+<div class="absolute inset-0 bg-black/70"></div>
+
+<div class="relative z-10 max-w-4xl mx-auto text-center px-6">
+
+<h2 class="text-5xl md:text-6xl font-bold text-white leading-tight mb-10">
+
+Transforme seu ambiente com exclusividade e sofisticação
+
+</h2>
+
+<div class="flex flex-wrap justify-center gap-5">
+
+<a href="https://wa.me/5500000000000"
+class="btn-primary">
+Solicitar orçamento
+</a>
+
+<a href="https://wa.me/5500000000000"
+class="btn-outline">
+Falar no WhatsApp
+</a>
 
 </div>
 
@@ -692,69 +646,72 @@ class="rounded-3xl shadow-xl">
 </section>
 
 <!-- FOOTER -->
+<footer id="contato" class="bg-[#111] text-white py-20">
 
-<footer class="bg-[#08134d] text-white py-14">
-
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
 
 <div>
 
-<h2 class="text-3xl font-bold mb-5">
-HOME INTERIORES
-</h2>
+<img src="images/logo.png"
+class="h-16 mb-6">
 
-<p class="text-gray-300 leading-8">
-
-Sofisticação em cada detalhe.
-
+<p class="text-gray-400">
+Móveis planejados premium com sofisticação e exclusividade.
 </p>
 
 </div>
 
 <div>
 
-<h3 class="font-bold text-2xl mb-5">
+<h3 class="text-xl font-bold mb-6 gold">
 Links Rápidos
 </h3>
 
-<div class="flex flex-col gap-3">
+<ul class="space-y-3 text-gray-400">
 
-<a href="#inicio">Início</a>
-<a href="#catalogo">Catálogo</a>
-<a href="#projetos">Projetos</a>
-<a href="#contato">Contato</a>
+<li><a href="#">Home</a></li>
+<li><a href="#">Projetos</a></li>
+<li><a href="#">Sobre</a></li>
+<li><a href="#">Contato</a></li>
 
-</div>
+</ul>
 
 </div>
 
 <div>
 
-<h3 class="font-bold text-2xl mb-5">
+<h3 class="text-xl font-bold mb-6 gold">
+Contato
+</h3>
+
+<p class="text-gray-400 mb-3">
+(00) 00000-0000
+</p>
+
+<p class="text-gray-400 mb-3">
+contato@homeinteriores.com.br
+</p>
+
+<p class="text-gray-400">
+Minas Gerais - Brasil
+</p>
+
+</div>
+
+<div>
+
+<h3 class="text-xl font-bold mb-6 gold">
 Redes Sociais
 </h3>
 
 <div class="flex gap-5 text-3xl">
 
-<a href="https://instagram.com/homeinteriores"
-target="_blank">
-
-<i class="fab fa-instagram"></i>
-
+<a href="https://instagram.com/homeinteriores">
+📷
 </a>
 
-<a href="https://wa.me/5531999999999"
-target="_blank">
-
-<i class="fab fa-whatsapp"></i>
-
-</a>
-
-<a href="https://facebook.com"
-target="_blank">
-
-<i class="fab fa-facebook"></i>
-
+<a href="https://wa.me/5500000000000">
+💬
 </a>
 
 </div>
@@ -763,13 +720,50 @@ target="_blank">
 
 </div>
 
-<div class="border-t border-white/20 mt-12 pt-8 text-center text-gray-300">
+<div class="border-t border-white/10 mt-16 pt-10 text-center text-gray-500">
 
 © 2026 HOME INTERIORES — Todos os direitos reservados.
 
 </div>
 
 </footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20para%20móveis%20planejados."
+class="whatsapp-float">
+
+<div class="w-16 h-16 rounded-full bg-green-500 flex items-center justify-center text-white text-3xl shadow-2xl">
+
+💬
+
+</div>
+
+</a>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+
+AOS.init({
+    duration:1200,
+    once:true
+});
+
+const swiper = new Swiper(".mySwiper", {
+    loop:true,
+    autoplay:{
+        delay:4000,
+    },
+    pagination:{
+        el:".swiper-pagination",
+        clickable:true,
+    },
+});
+
+</script>
 
 </body>
 </html>
